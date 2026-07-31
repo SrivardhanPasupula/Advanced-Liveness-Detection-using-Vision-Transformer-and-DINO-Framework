@@ -314,49 +314,6 @@ IMAGE_SIZE = 224
 
 ---
 
-## 🐛 Troubleshooting
-
-### Webcam Not Working
-```bash
-# Check camera
-python -c "import cv2; cap = cv2.VideoCapture(0); print(cap.isOpened())"
-
-# Try different camera index
-python test_trained_model.py --mode webcam --camera 1
-```
-
-### GPU Not Detected
-```bash
-# Check CUDA
-nvidia-smi
-
-# Check PyTorch CUDA
-python -c "import torch; print(torch.cuda.is_available())"
-
-# Reinstall PyTorch with CUDA
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-```
-
-### Out of Memory
-```bash
-# Reduce batch size
-python train_gpu.py --batch-size 16
-
-# Use gradient accumulation
-python train_gpu.py --batch-size 8 --accumulation-steps 4
-```
-
-### Model Not Loading
-```bash
-# Check if model exists
-ls models/best_model.pth
-
-# Verify model
-python check_model.py
-```
-
----
-
 ## 📚 API Reference
 
 ### Web API Endpoints
@@ -479,12 +436,6 @@ CMD ["python", "app.py"]
 
 ---
 
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
 
 
 ## 🙏 Acknowledgments
