@@ -479,11 +479,6 @@ CMD ["python", "app.py"]
 
 ---
 
-## 📝 License
-
-[Your License Here]
-
----
 
 ## 🤝 Contributing
 
@@ -491,11 +486,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## 📧 Contact
-
-[Your Contact Information]
-
----
 
 ## 🙏 Acknowledgments
 
