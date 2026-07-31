@@ -1,0 +1,12 @@
+# Web Application Requirements
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Already installed (from main requirements)
+# torch
+# torchvision
+# opencv-python
+# numpy
+# albumentations
+# timm
+# tqdm
