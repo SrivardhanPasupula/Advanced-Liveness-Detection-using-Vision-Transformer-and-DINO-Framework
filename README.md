@@ -295,14 +295,6 @@ if confidence < 0.7:  # 70% threshold
     label = "UNCERTAIN"
 ```
 
-### Change Web Port
-
-Edit `app.py`:
-```python
-app.run(debug=True, host='0.0.0.0', port=5000)
-# Change 5000 to your desired port
-```
-
 ### Adjust Model Settings
 
 Edit `config.py`:
