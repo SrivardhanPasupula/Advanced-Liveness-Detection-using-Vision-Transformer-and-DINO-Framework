@@ -312,51 +312,6 @@ LEARNING_RATE = 1e-4
 IMAGE_SIZE = 224
 ```
 
----
-
-## 📚 API Reference
-
-### Web API Endpoints
-
-#### Start Detection
-```
-POST /start_detection
-Response: {"status": "started"}
-```
-
-#### Stop Detection
-```
-POST /stop_detection
-Response: {
-    "status": "stopped",
-    "last_frame": "data:image/jpeg;base64,..."
-}
-```
-
-#### Get Statistics
-```
-GET /stats
-Response: {
-    "total_detections": 5,
-    "live_count": 3,
-    "spoof_count": 2,
-    "last_prediction": "LIVE",
-    "last_confidence": 0.87
-}
-```
-
-#### Upload Image
-```
-POST /upload_image
-Body: FormData with 'image' file
-Response: {
-    "prediction": "LIVE",
-    "confidence": 0.87,
-    "image": "data:image/jpeg;base64,..."
-}
-```
-
----
 
 ## 🎓 Model Architecture
 
@@ -373,12 +328,6 @@ Response: {
 - Exponential Moving Average (EMA)
 - Combined supervised + self-supervised loss
 
-### Training Details
-- Optimizer: AdamW
-- Learning rate: 1e-4
-- Scheduler: Cosine Annealing
-- Mixed precision: FP16
-- Batch size: 32
 
 ---
 
@@ -425,18 +374,6 @@ pip install waitress
 waitress-serve --host=0.0.0.0 --port=5000 app:app
 ```
 
-### Docker Deployment
-```dockerfile
-FROM python:3.9
-WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
-CMD ["python", "app.py"]
-```
-
----
-
-
 
 ## 🙏 Acknowledgments
 
@@ -444,22 +381,6 @@ CMD ["python", "app.py"]
 - DINO self-supervised learning framework
 - PyTorch deep learning framework
 - OpenCV computer vision library
-
----
-
-## 📊 Citation
-
-If you use this project in your research, please cite:
-
-```bibtex
-@misc{face-antispoofing,
-  title={Face Anti-Spoofing System with Vision Transformers},
-  author={Your Name},
-  year={2024},
-  publisher={GitHub},
-  url={https://github.com/yourusername/face-antispoofing}
-}
-```
 
 ---
 
